@@ -13,6 +13,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
 Route::get('/', function () {
-    return view('welcome');
+
+    $title = "Hello World!";
+
+    return view('home', compact('title'));
+});
+
+Route::get('/primo', function () {
+
+    $title1 = "Sono forte!";
+
+    return view('primo', compact('title1'));
+});
+
+Route::get('/secondo', function () {
+
+    $title2 = "Sono troppo forte!";
+
+    return view('secondo', compact('title2'));
 });
